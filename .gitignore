@@ -1,0 +1,92 @@
+# =============== #
+#   Unity .gitignore
+# =============== #
+
+# OS-specific
+[Dd]esktop.ini
+[Tt]humbs.db
+*.DS_Store
+
+# ==================== #
+# Unity Generated Files
+# ==================== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# New Unity Cache
+MemoryCaptures/
+Artifacts/
+
+# Rider / Visual Studio
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity Auto-Generated
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Crash Reports
+*.dmp
+
+# ==================== #
+# Asset Store / Package Cache
+# ==================== #
+*.unitypackage
+Assets/Plugins/Editor/JetBrains*
+Packages/com.unity.package-manager-ui*
+/PackageCache/
+
+# Addressables / Streaming
+Assets/StreamingAssets/aa/*
+Assets/AddressableAssetsData/*/*.bin*
+
+# ==================== #
+# Build Artifacts
+# ==================== #
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+*.ipa
+
+# ==================== #
+# Logs / Temp
+# ==================== #
+*.log
+
+# ==================== #
+# Unity Collaborate / Plastic
+# ==================== #
+.collabignore
+.plastic/
+
+# ==================== #
+# Rider / VSCode / Other Editors
+# ==================== #
+.idea/
+.vscode/
+*.code-workspace
+
+# ==================== #
+# Auto-generated meta backups
+# ==================== #
+*.meta~
+
+Assets/Stylized Lava PBR Texture/Textures/Lava_basecolor.png
+Assets/Stylized Lava PBR Texture/Textures/Lava_normal.png
