@@ -11,6 +11,12 @@ public class SignSelect : UdonSharpBehaviour
     public DerivativeProblemBankImages problemBank;
     public int problemIndex;
 
+    public HeartsManager heartScript;
+
+    public AudioSource wrongSound;
+    public AudioSource rightSound;
+
+
     [Header("UI Images on the sign")]
     public Image problemImage;
     public Image option0Image;
@@ -22,6 +28,7 @@ public class SignSelect : UdonSharpBehaviour
     public Transform[] signPoints;     // size 10: where sign should be at each stage
 
     // current stage (0..playerPoints.Length-1)
+    [SerializeField]
     private int stageIndex = 0;
 
     // which finger is correct this time? 0, 1, or 2
@@ -42,6 +49,11 @@ public class SignSelect : UdonSharpBehaviour
         if (signPoints != null && stageIndex >= 0 && stageIndex < signPoints.Length && signPoints[stageIndex] != null)
         {
             transform.SetPositionAndRotation(new Vector3(signPoints[stageIndex].position.x, signPoints[stageIndex].position.y + 0.7f, signPoints[stageIndex].position.z), Quaternion.Euler(-90, 0, 0));
+            foreach (Transform childTransform in this.transform)
+            {
+                GameObject childObject = childTransform.gameObject;
+                childObject.SetActive(true);
+            }
         }
 
         // NOTE: we don't teleport the player here; only on correct answer
@@ -102,18 +114,40 @@ public class SignSelect : UdonSharpBehaviour
     }
 
     // called from FingerOption.Interact()
-    public void OnOptionSelected(int chosenIndex)
+    public void OnOptionSelected(int chosenIndex, GameObject sender)
     {
         Debug.Log("[SignSelect] Option clicked: " + chosenIndex + " (correctSlot = " + correctSlot + ")");
 
         if (chosenIndex == correctSlot)
         {
             Debug.Log("[SignSelect] Correct answer chosen! Teleporting to next stage.");
+            rightSound.Play();
             TeleportToNextStage();
         }
         else
         {
             Debug.Log("[SignSelect] Wrong answer selected.");
+
+            sender.SetActive(false);
+            //TODO:: REMOVE COMMENT WHEN ALLL STAGES ARE IMPLEMENTED
+            // if (stageIndex >= 0 && stageIndex < 3)
+            // {
+            //     return; // no penaty for wrong answer at the beginning 'tutorial'       
+            //}
+            //decrement heart health 
+            heartScript.setHearts(heartScript.getHearts() - 1);
+            wrongSound.Play();
+            Debug.Log("[SignSelect] Heart health: " + heartScript.getHearts());
+            if (heartScript.getHearts() == 0)
+            {
+                //RESTART 
+                heartScript.setHearts(3);
+                SnapToStage(0);
+                Transform targetPoint = playerPoints[0];
+                VRCPlayerApi player = Networking.LocalPlayer;
+                player.TeleportTo(targetPoint.position, targetPoint.rotation);
+                RandomizeProblem();
+            }
         }
     }
 
