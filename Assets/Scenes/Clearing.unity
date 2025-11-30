@@ -292,8 +292,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156087047}
-  m_LocalRotation: {x: 0.0005718469, y: -0.99637187, z: 0.002767652, w: 0.0850592}
-  m_LocalPosition: {x: 0, y: 0, z: -0.046}
+  m_LocalRotation: {x: 0.00039127463, y: -0.98876506, z: 0.0027988253, w: 0.14945142}
+  m_LocalPosition: {x: 0, y: 0, z: 0.6}
   m_LocalScale: {x: 0.81506246, y: 0.8150628, z: 0.8150625}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -301,10 +301,10 @@ RectTransform:
   - {fileID: 1911869946}
   - {fileID: 1448240853}
   m_Father: {fileID: 424618827}
-  m_LocalEulerAnglesHint: {x: 0.322, y: 189.759, z: -0.038}
+  m_LocalEulerAnglesHint: {x: 0.324, y: 197.19, z: 0.004}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.092, y: 1.09}
+  m_AnchoredPosition: {x: -2.76, y: 0.89}
   m_SizeDelta: {x: 2.3877, y: 0.6926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156087049
@@ -1131,8 +1131,9 @@ MonoBehaviour:
   m_text: So the fox jumped over the really big fence and did a u turn on the ground
     while he broke dance
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e528b0370a72f1d4b895be2149fa58cd, type: 2}
+  m_sharedMaterial: {fileID: -3780550144449716732, guid: e528b0370a72f1d4b895be2149fa58cd,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1893,6 +1894,7 @@ MonoBehaviour:
   heartScript: {fileID: 626278294}
   wrongSound: {fileID: 77699395}
   rightSound: {fileID: 1355333193}
+  problemText: {fileID: 485924726}
   problemImage: {fileID: 6308670261778738137}
   option0Image: {fileID: 6308670261778738136}
   option1Image: {fileID: 6308670261778738135}
@@ -2359,6 +2361,10 @@ MonoBehaviour:
     - VRC.Udon.UdonBehaviour
   - gameObject: {fileID: 598809458}
     ID: 24
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 0}
+    ID: 25
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
@@ -3198,6 +3204,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1517951362}
+  - component: {fileID: 1517951364}
+  - component: {fileID: 1517951363}
   m_Layer: 0
   m_Name: PopupCanvas
   m_TagString: Untagged
@@ -3213,15 +3221,63 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517951361}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -198.32578, y: 412.43427, z: 223.59949}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.36229655, y: 0.6051832, z: 0.6072406, w: 0.36572304}
+  m_LocalPosition: {x: -0.026730275, y: 0.014371222, z: 0.013885393}
+  m_LocalScale: {x: 0.012268995, y: 0.012268995, z: 0.012268995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 373963643}
   - {fileID: 384949329}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1863083368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517951363
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517951361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45115577ef41a5b4ca741ed302693907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactTextPlacement: {fileID: 0}
+  interactText: Use
+  interactTextGO: {fileID: 0}
+  proximity: 2
+  SynchronizePosition: 0
+  AllowCollisionOwnershipTransfer: 0
+  Reliable: 0
+  _syncMethod: 2
+  serializedProgramAsset: {fileID: 11400000, guid: e84300a51b9fd2745988bf4d966da669,
+    type: 2}
+  programSource: {fileID: 11400000, guid: fda45bb6285d5c2429d8c116752092fa, type: 2}
+  serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
+  publicVariablesUnityEngineObjects: []
+  publicVariablesSerializationDataFormat: 0
+--- !u!114 &1517951364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517951361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f3bc398c75c3d49a033c6b7cef87ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _udonSharpBackingUdonBehaviour: {fileID: 1517951363}
 --- !u!1 &1573282615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9374,6 +9430,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1355333192}
+    - targetCorrespondingSourceObject: {fileID: 635440433639779779, guid: ff0b9fa21bf55fb408a9456d2abba0ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1517951362}
     - targetCorrespondingSourceObject: {fileID: 3986385864072495496, guid: ff0b9fa21bf55fb408a9456d2abba0ca,
         type: 3}
       insertIndex: -1
@@ -9665,4 +9725,3 @@ SceneRoots:
   - {fileID: 626278295}
   - {fileID: 598809461}
   - {fileID: 1385312842}
-  - {fileID: 1517951362}
