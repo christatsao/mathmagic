@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using VRC.SDKBase;
 using VRC.Udon;
+using UnityEngine.UI;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class SignSelect : UdonSharpBehaviour
@@ -16,6 +17,7 @@ public class SignSelect : UdonSharpBehaviour
     public AudioSource wrongSound;
     public AudioSource rightSound;
 
+    public TMPro.TextMeshProUGUI problemText;
 
     [Header("UI Images on the sign")]
     public Image problemImage;
@@ -111,6 +113,21 @@ public class SignSelect : UdonSharpBehaviour
         }
 
         Debug.Log("[SignSelect] Stage " + stageIndex + " using problem " + problemIndex + " with correctSlot " + correctSlot);
+
+    }
+
+    private int index = 0;
+    private string message = "";
+    public void TypeNextCharacter()
+    {
+        if (index >= message.Length) return;
+
+        // Add next character
+        problemText.text += message[index];
+        index++;
+
+        // Call this same method again after delay
+        SendCustomEventDelayedSeconds(nameof(TypeNextCharacter), 0.05f);
     }
 
     // called from FingerOption.Interact()
@@ -137,16 +154,23 @@ public class SignSelect : UdonSharpBehaviour
             //decrement heart health 
             heartScript.setHearts(heartScript.getHearts() - 1);
             wrongSound.Play();
+            message = "Nice try... try again!";
+            index = 0;
+            problemText.text = "";
+            TypeNextCharacter();
+
             Debug.Log("[SignSelect] Heart health: " + heartScript.getHearts());
             if (heartScript.getHearts() == 0)
             {
                 //RESTART 
+                message = "You got lost... We're restarting from the beginning";
                 heartScript.setHearts(3);
                 SnapToStage(0);
                 Transform targetPoint = playerPoints[0];
                 VRCPlayerApi player = Networking.LocalPlayer;
                 player.TeleportTo(targetPoint.position, targetPoint.rotation);
                 RandomizeProblem();
+
             }
         }
     }
