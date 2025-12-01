@@ -21,6 +21,6 @@ public class FingerOption : UdonSharpBehaviour
         }
 
         Debug.Log("[FingerOption] Interact on option " + optionIndex);
-        sign.OnOptionSelected(optionIndex);
+        sign.OnOptionSelected(optionIndex, this.gameObject);
     }
 }
