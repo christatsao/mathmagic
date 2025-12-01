@@ -90,3 +90,6 @@ Assets/AddressableAssetsData/*/*.bin*
 
 Assets/Stylized Lava PBR Texture/Textures/Lava_basecolor.png
 Assets/Stylized Lava PBR Texture/Textures/Lava_normal.png
+
+# Visual Studio cache
+.vs/
