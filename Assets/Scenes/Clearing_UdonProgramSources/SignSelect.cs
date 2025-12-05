@@ -24,6 +24,26 @@ public class SignSelect : UdonSharpBehaviour
     public Image option1Image;
     public Image option2Image;
 
+    [Header("Lost behaviour")]
+    public Transform lostPoint;        // where the player goes when they lose all lives
+    public float lostDuration = 20f;   // how long they stay lost before restart
+
+    [Header("Stage Music")]
+    public AudioSource hellTrack;       // plays on stages 0,1,2
+    public AudioSource lostSoulsTrack;  // plays on stages 3,4,5
+    public AudioSource oasisTrack;      // plays on stages 6,7,8,9
+
+    [Header("Stage Effects")]
+    public GameObject lightningEffect;      // hell lightning FX
+    public GameObject lostSoulsSfxGroup;    // group of extra sound effects
+
+    // -1 = none, 0 = Hell, 1 = LostSouls, 2 = Oasis
+    private int currentMusicRegion = -1;
+
+
+
+
+
     [Header("Path through the world (0 = start, last = end)")]
     public Transform[] playerPoints;   // where the PLAYER should be at each stage
     public Transform[] signPoints;     // where the PLAY AREA (this object + children) goes for stages > 0
@@ -92,9 +112,16 @@ public class SignSelect : UdonSharpBehaviour
 
         // Make sure children (sign, ghost, dialogue, etc.) are active
         foreach (Transform childTransform in transform)
-        {
+        {   foreach (Transform childChildTransform in childTransform)
+            {
+                childChildTransform.gameObject.SetActive(true); 
+            }
             childTransform.gameObject.SetActive(true);
         }
+
+
+        // NEW: update music and FX for this stage
+        UpdateStageAudioAndFX();
 
         Debug.Log("[SignSelect] Snapped PLAY AREA to stage " + stageIndex);
     }
@@ -199,26 +226,15 @@ public class SignSelect : UdonSharpBehaviour
             Debug.Log("[SignSelect] Heart health: " + heartScript.getHearts());
             if (heartScript.getHearts() == 0)
             {
-                // restart everything at stage 0
-                message = "You got lost... We're restarting from the beginning";
-                heartScript.setHearts(3);
+                // send them to the LostPoint first
+                message = "You got lost... We'll reset you in a moment.";
+                index = 0;
+                problemText.text = "";
+                TypeNextCharacter();
 
-                // move PlayArea back to original editor position
-                SnapToStage(0);
-
-                // teleport player back to stage 0 player point
-                if (playerPoints != null && playerPoints.Length > 0 && playerPoints[0] != null)
-                {
-                    Transform targetPoint = playerPoints[0];
-                    VRCPlayerApi player = Networking.LocalPlayer;
-                    if (player != null)
-                    {
-                        player.TeleportTo(targetPoint.position, targetPoint.rotation);
-                    }
-                }
-
-                RandomizeProblem();
+                GoToLostPoint();
             }
+
         }
     }
 
@@ -268,6 +284,65 @@ public class SignSelect : UdonSharpBehaviour
     }
 
     // --------------------------------------------------------------------
+    //  Handle "lost" state when hearts reach 0
+    // --------------------------------------------------------------------
+    public void GoToLostPoint()
+    {
+        VRCPlayerApi player = Networking.LocalPlayer;
+        if (lostPoint != null && player != null)
+        {
+            Debug.Log("[SignSelect] Hearts reached 0. Teleporting player to LostPoint.");
+            player.TeleportTo(lostPoint.position, lostPoint.rotation);
+        }
+        else
+        {
+            Debug.LogWarning("[SignSelect] LostPoint is not set or player is null. Falling back to direct restart.");
+            RestartFromStageZero();
+            return;
+        }
+
+        // schedule returning after lostDuration seconds
+        SendCustomEventDelayedSeconds(nameof(ReturnFromLost), lostDuration);
+    }
+
+    public void ReturnFromLost()
+    {
+        Debug.Log("[SignSelect] Returning player from LostPoint to stage 0.");
+
+        RestartFromStageZero();
+    }
+
+    private void RestartFromStageZero()
+    {
+        // reset hearts
+        heartScript.setHearts(3);
+
+        // move PlayArea back to stage 0
+        SnapToStage(0);
+
+        // teleport player back to stage 0 player point
+        if (playerPoints != null && playerPoints.Length > 0 && playerPoints[0] != null)
+        {
+            Transform targetPoint = playerPoints[0];
+            VRCPlayerApi player = Networking.LocalPlayer;
+            if (player != null)
+            {
+                player.TeleportTo(targetPoint.position, targetPoint.rotation);
+            }
+        }
+
+        // new problem for the restart
+        RandomizeProblem();
+
+        // optional: message after reset
+        message = "You're back at the start. Try again!";
+        index = 0;
+        problemText.text = "";
+        TypeNextCharacter();
+    }
+
+
+    // --------------------------------------------------------------------
     //  Randomize problem index for new stage
     // --------------------------------------------------------------------
     private void RandomizeProblem()
@@ -293,4 +368,88 @@ public class SignSelect : UdonSharpBehaviour
         problemIndex = newIndex;
         SetupProblem();
     }
+
+    // --------------------------------------------------------------------
+    //  Update music & FX based on current stageIndex
+    // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
+    //  Update music & FX based on current stageIndex
+    // --------------------------------------------------------------------
+    private void UpdateStageAudioAndFX()
+    {
+        // Decide which region this stage belongs to
+        int newRegion = -1;
+
+        // Hell: stages 0,1,2
+        if (stageIndex >= 0 && stageIndex <= 2)
+        {
+            newRegion = 0;
+        }
+        // LostSouls: stages 3,4,5
+        else if (stageIndex >= 3 && stageIndex <= 5)
+        {
+            newRegion = 1;
+        }
+        // Oasis: stages 6,7,8,9
+        else if (stageIndex >= 6 && stageIndex <= 9)
+        {
+            newRegion = 2;
+        }
+
+        // --- MUSIC HANDLING: only switch when region actually changes ---
+        if (newRegion != currentMusicRegion)
+        {
+            // Stop old region's music
+            if (currentMusicRegion == 0 && hellTrack != null)
+            {
+                hellTrack.Stop();
+            }
+            else if (currentMusicRegion == 1 && lostSoulsTrack != null)
+            {
+                lostSoulsTrack.Stop();
+            }
+            else if (currentMusicRegion == 2 && oasisTrack != null)
+            {
+                oasisTrack.Stop();
+            }
+
+            // Start new region's music
+            if (newRegion == 0 && hellTrack != null && !hellTrack.isPlaying)
+            {
+                hellTrack.Play();
+            }
+            else if (newRegion == 1 && lostSoulsTrack != null && !lostSoulsTrack.isPlaying)
+            {
+                lostSoulsTrack.Play();
+            }
+            else if (newRegion == 2 && oasisTrack != null && !oasisTrack.isPlaying)
+            {
+                oasisTrack.Play();
+            }
+
+            currentMusicRegion = newRegion;
+        }
+
+        // --- FX HANDLING: can update every time ---
+
+        // Default all FX off
+        if (lightningEffect != null) lightningEffect.SetActive(false);
+        if (lostSoulsSfxGroup != null) lostSoulsSfxGroup.SetActive(false);
+
+        // Hell FX: lightning on
+        if (newRegion == 0)
+        {
+            if (lightningEffect != null)
+                lightningEffect.SetActive(true);
+        }
+        // LostSouls FX: lightning off, lostSouls SFX on
+        else if (newRegion == 1)
+        {
+            if (lostSoulsSfxGroup != null)
+                lostSoulsSfxGroup.SetActive(true);
+        }
+        // Oasis FX: both off (or customize here if you want oasis ambience)
+    }
+
+
 }
