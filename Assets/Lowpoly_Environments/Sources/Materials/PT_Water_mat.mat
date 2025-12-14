@@ -94,7 +94,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mettalic: 0.764
+    - _Mettalic: 0.934
     - _Mode: 0
     - _NormalMapWavesSpeed: 0.223
     - _NormalMapsWavesSize: 6.14
@@ -106,7 +106,7 @@ Material:
     - _SmallWavesSpeed: 0.5
     - _Smoothness: 0.702
     - _SmoothnessTextureChannel: 0
-    - _Smootness: 0.837
+    - _Smootness: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Strenght: 0.5
@@ -115,9 +115,9 @@ Material:
     - _TessMin: 1
     - _TessValue: 5.2
     - _UVSec: 0
-    - _WaveAmplitude: 0
-    - _WaveSpeed: 0
-    - _WaveTile: 0
+    - _WaveAmplitude: 0.84
+    - _WaveSpeed: 0.028
+    - _WaveTile: 0.085
     - _Wavespeed: 0.5
     - _Wavetile: 0.37
     - _ZWrite: 1
