@@ -26,6 +26,9 @@ public class IntroDialogue : UdonSharpBehaviour
     private int currentIndex = -1;
     private bool dialogueActive;
 
+    [Header("Dialogue Sound")]
+    public AudioSource speakingSound;
+
     private void Start()
     {
         // Make sure dialogue panel starts hidden
@@ -58,6 +61,8 @@ public class IntroDialogue : UdonSharpBehaviour
 
         dialogueActive = true;
         currentIndex = 0;
+
+        if(speakingSound != null) speakingSound.Play();
 
         dialoguePanel.SetActive(true);
         ShowCurrentLine();
@@ -101,6 +106,9 @@ public class IntroDialogue : UdonSharpBehaviour
         {
             TeleportToStage0();
         }
+
+        if (speakingSound != null) speakingSound.Stop();
+
     }
 
     private void TeleportToStage0()

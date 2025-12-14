@@ -22,6 +22,9 @@ public class GhostDialogueManager : UdonSharpBehaviour
     private int currentIndex = -1;
     private bool dialogueActive;
 
+    [Header("Dialogue Sound")]
+    public AudioSource speakingSound;
+
     private void Start()
     {
         // Make sure panel starts hidden
@@ -55,6 +58,8 @@ public class GhostDialogueManager : UdonSharpBehaviour
         dialogueActive = true;
         currentIndex = 0;
 
+        if (speakingSound != null) speakingSound.Play();
+        
         dialoguePanel.SetActive(true);
         ShowCurrentLine();
     }
@@ -91,6 +96,8 @@ public class GhostDialogueManager : UdonSharpBehaviour
 
         // If you want to trigger something after dialogue, you can
         // SendCustomEvent to another UdonBehaviour here.
+
+        if (speakingSound != null) speakingSound.Stop();
     }
 
     // Optional: if you want to start from a button instead of Interact

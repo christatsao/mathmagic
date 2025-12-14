@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\IntroDialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\IntroDialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C229C89-A77B-3694-55D9-AAA19489F206}|UdonSharp.Editor.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\packages\\com.vrchat.worlds\\integrations\\udonsharp\\editor\\udonsharputils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C229C89-A77B-3694-55D9-AAA19489F206}|UdonSharp.Editor.csproj|solutionrelative:packages\\com.vrchat.worlds\\integrations\\udonsharp\\editor\\udonsharputils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|c:\\users\\maveric\\christatemp\\testing\\assets\\scenes\\clearing_udonprogramsources\\ghostdialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\clearing_udonprogramsources\\ghostdialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\scenes\\clearing_udonprogramsources\\signselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\clearing_udonprogramsources\\signselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|c:\\users\\maveric\\christatemp\\testing\\assets\\introdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\introdialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\scenes\\clearing_udonprogramsources\\ghostdialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\clearing_udonprogramsources\\ghostdialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\ultimate 10 plus shaders\\shaders\\lava3d.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\ultimate 10 plus shaders\\shaders\\lava3d.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\scenes\\clearing_udonprogramsources\\lightningeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\clearing_udonprogramsources\\lightningeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C229C89-A77B-3694-55D9-AAA19489F206}|UdonSharp.Editor.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\packages\\com.vrchat.worlds\\integrations\\udonsharp\\editor\\udonsharputils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C229C89-A77B-3694-55D9-AAA19489F206}|UdonSharp.Editor.csproj|solutionrelative:packages\\com.vrchat.worlds\\integrations\\udonsharp\\editor\\udonsharputils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\scenes\\clearing_udonprogramsources\\ghostlooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7C229C89-A77B-3694-55D9-AAA19489F206}|UdonSharp.Editor.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\packages\\com.vrchat.worlds\\integrations\\udonsharp\\editor\\udonsharpassemblydefinitionpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C229C89-A77B-3694-55D9-AAA19489F206}|UdonSharp.Editor.csproj|solutionrelative:packages\\com.vrchat.worlds\\integrations\\udonsharp\\editor\\udonsharpassemblydefinitionpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\scenes\\clearing_udonprogramsources\\lightningeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\clearing_udonprogramsources\\lightningeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36ED1CE3-772E-F3DE-3FE9-21977164E909}|Assembly-CSharp.csproj|C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\assets\\scripts\\derivativeproblembankimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,17 +65,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IntroDialogue.cs",
               "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\IntroDialogue.cs",
               "RelativeDocumentMoniker": "Assets\\IntroDialogue.cs",
               "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\IntroDialogue.cs",
               "RelativeToolTip": "Assets\\IntroDialogue.cs",
-              "ViewState": "AQIAAFkAAAAAeCzv1RYfwHkAAAAmAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAASwHEAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T23:30:00.422Z",
               "EditorCaption": ""
@@ -88,26 +88,53 @@
               "RelativeDocumentMoniker": "Assets\\Scenes\\Clearing_UdonProgramSources\\GhostDialogueManager.cs",
               "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\GhostDialogueManager.cs",
               "RelativeToolTip": "Assets\\Scenes\\Clearing_UdonProgramSources\\GhostDialogueManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAUAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAADgvz0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T23:10:32.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Lava3D.shader",
               "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Ultimate 10 Plus Shaders\\Shaders\\Lava3D.shader",
               "RelativeDocumentMoniker": "Assets\\Ultimate 10 Plus Shaders\\Shaders\\Lava3D.shader",
               "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Ultimate 10 Plus Shaders\\Shaders\\Lava3D.shader",
               "RelativeToolTip": "Assets\\Ultimate 10 Plus Shaders\\Shaders\\Lava3D.shader",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAkAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAACQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-12-04T21:06:08.294Z"
+              "WhenOpened": "2025-12-04T21:06:08.294Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "LightningEffect.cs",
+              "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
+              "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:58:26.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignSelect.cs",
+              "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
+              "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T21:55:02.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UdonSharpUtils.cs",
               "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Packages\\com.vrchat.worlds\\Integrations\\UdonSharp\\Editor\\UdonSharpUtils.cs",
               "RelativeDocumentMoniker": "Packages\\com.vrchat.worlds\\Integrations\\UdonSharp\\Editor\\UdonSharpUtils.cs",
@@ -115,24 +142,11 @@
               "RelativeToolTip": "Packages\\com.vrchat.worlds\\Integrations\\UdonSharp\\Editor\\UdonSharpUtils.cs",
               "ViewState": "AQIAADQBAAAAAAAAAAAowE0BAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T02:01:27.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T02:01:27.72Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LightningEffect.cs",
-              "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
-              "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Clearing_UdonProgramSources\\LightningEffect.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAqwBMAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T01:58:26.983Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "UdonSharpAssemblyDefinitionPostProcessor.cs",
               "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Packages\\com.vrchat.worlds\\Integrations\\UdonSharp\\Editor\\UdonSharpAssemblyDefinitionPostProcessor.cs",
               "RelativeDocumentMoniker": "Packages\\com.vrchat.worlds\\Integrations\\UdonSharp\\Editor\\UdonSharpAssemblyDefinitionPostProcessor.cs",
@@ -144,19 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SignSelect.cs",
-              "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
-              "RelativeDocumentMoniker": "Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
-              "ToolTip": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
-              "RelativeToolTip": "Assets\\Scenes\\Clearing_UdonProgramSources\\SignSelect.cs",
-              "ViewState": "AQIAAJIBAAAAAAAAAAAiwLYBAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:55:02.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ghostLooking.cs",
               "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scenes\\Clearing_UdonProgramSources\\ghostLooking.cs",
               "RelativeDocumentMoniker": "Assets\\Scenes\\Clearing_UdonProgramSources\\ghostLooking.cs",
@@ -168,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FingerOption.cs",
               "DocumentMoniker": "C:\\Users\\MAVERiC\\ChristaTemp\\Testing\\Assets\\Scripts\\FingerOption.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FingerOption.cs",

@@ -41,9 +41,6 @@ public class SignSelect : UdonSharpBehaviour
     private int currentMusicRegion = -1;
 
 
-
-
-
     [Header("Path through the world (0 = start, last = end)")]
     public Transform[] playerPoints;   // where the PLAYER should be at each stage
     public Transform[] signPoints;     // where the PLAY AREA (this object + children) goes for stages > 0
